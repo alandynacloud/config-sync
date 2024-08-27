@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine
+  labels:
+    app: alpine
+spec:
+  containers:
+  - name: alpine
+    image: quay.io/ict39/alpine.sshd
+    stdin: true
+    tty: true
+    resources:
+      requests:
+        memory: "1G"
+        cpu: "250m"
+      limits:
+        memory: "2G"
+        cpu: "1"
